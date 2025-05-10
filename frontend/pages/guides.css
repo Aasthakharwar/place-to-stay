@@ -1,0 +1,69 @@
+.guide-image-container {
+  position: relative; /* Position relative to contain absolutely positioned children */
+  width: 100%; /* Allow the container to take full width */
+  max-width: 450px; /* Set a max width for larger screens */
+  height: auto; /* Height will be determined by the aspect ratio */
+  aspect-ratio: 3 / 2; /* Maintain a 3:2 aspect ratio (450px / 300px) */
+  overflow: hidden; /* Prevent overflow of child elements */
+}
+
+/* Optional: Adjust for smaller screens if needed */
+@media (max-width: 600px) {
+  .guide-image-container {
+    max-width: 100%; /* Full width on smaller screens */
+    height: auto; /* Let height adjust automatically */
+  }
+
+  .guide-wrapper {
+    padding-left: 0px !important; /* Adjust as necessary for spacing */
+    padding-right: 0px !important; /* Adjust as necessary for spacing */
+  }
+  
+}
+
+.guide-image {
+  width: 100%; /* Make image responsive within the container */
+  height: 100%; /* Ensure it takes full height of the container */
+  object-fit: cover; /* Ensures the image covers the area */
+  border-radius: 6px; /* Optional: round corners */
+}
+
+.guide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(-50%); 
+  color: white; 
+  background: rgba(0, 0, 0, 0.447);
+  padding: 5px; 
+ 
+  padding-left: 5%;
+  width: calc(100% );
+}
+
+.guide-name,
+.guide-speciality {
+  margin: 0; 
+}
+
+
+
+.guide-wrapper {
+  padding-left: 20px; /* Adjust as necessary for spacing */
+  padding-right: 20px; /* Adjust as necessary for spacing */
+}
+
+/* Optional: If you want more space between the filters and the guides */
+.flex {
+  gap: 20px; /* Adjusts space between filter and guides */
+}
+
+/* Additional styles for responsiveness and alignment */
+@media (max-width: 640px) {
+  .guide-wrapper {
+    padding-left: 10px; /* Less padding on small screens */
+    padding-right: 10px; /* Less padding on small screens */
+  }
+}
+
+/* Add any additional styles here as needed */
